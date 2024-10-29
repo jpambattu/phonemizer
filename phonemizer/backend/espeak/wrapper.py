@@ -237,7 +237,7 @@ class EspeakWrapper:
             # they are sorted by relevancy
             available = {}
             for voice in self.available_voices():
-                if voice.language not in available:
+                if voice.language not in available and 'mb' not in voice.identifier:
                     available[voice.language] = voice.identifier
 
         try:
